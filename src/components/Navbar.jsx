@@ -21,7 +21,7 @@ const Navbar = () => {
           }}
         >
           <img src="logo.svg" alt="logo" className="w-9 h-9 object-contain" />
-          <p className='text-white text-[18px] font-bold cursor-pointer'> Paul Mihang'o<span className='sm:block hidden'>Software Engineer</span></p>
+          <p className='text-white text-[18px] font-bold cursor-pointer flex'> Paul Mihang'o &nbsp;<span className='sm:block hidden'>| Software Engineer</span></p>
           </Link>
         <ul className='list-none hidden sm:flex flex-row gap-10'>
           {navLinks.map((Link) =>(
@@ -37,6 +37,20 @@ const Navbar = () => {
           onClick={() => setToggle(!toggle)}/>
 
           <div className={"${!toggle ? 'hidden' :'flex'} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded -xl"}>
+          <ul className='list-none flex justify-end items-start flex-col gap-4'>
+          {navLinks.map((Link) =>(
+            <li key={Link.id}className={'${active === Link.title ? "text-white": "text-secodary"} font-poppins font-medium cursor-pointer text-[16px]'} 
+            onClick={() => { 
+              setToggle(!toggle);
+              setActive(Link.title);}
+            }  
+            
+              >
+              <a href={'#${Link.id}'}> {Link.title}</a>
+            </li>
+          ))}
+
+        </ul>
 
           </div>
 
