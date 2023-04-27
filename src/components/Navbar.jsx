@@ -19,8 +19,17 @@ const Navbar = () => {
           window.scroll(0,0);
           }}
         >
-          {/* <img src="logo.svg" alt="logo" className="w-9 h-9 object-contain" /> */}
+          <img src="logo.svg" alt="logo" className="w-9 h-9 object-contain" />
+          <p className='text-white text-[18px] font-bold cursor-pointer'> Paul Mihang'o<span className='sm:block hidden'>Software Engineer</span></p>
         </Link>
+        <ul className='list-none hidden sm:flex flex-row gap-10'>
+          {navLinks.map((Link) =>(
+            <li>
+              <a href={'#${Link.id}'}>{Link.title}</a>
+            </li>
+          ))}
+
+        </ul>
 
       </div>
 
