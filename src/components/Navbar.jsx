@@ -19,7 +19,7 @@ const Navbar = () => {
           window.scroll(0,0);
           }}
         >
-          <img src="{logo}" alt="logo" className="w-9 h-9 object-contain" />
+          <img src="logo.svg" alt="logo" className="w-9 h-9 object-contain" />
         </Link>
 
       </div>
