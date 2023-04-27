@@ -21,11 +21,12 @@ const Navbar = () => {
         >
           <img src="logo.svg" alt="logo" className="w-9 h-9 object-contain" />
           <p className='text-white text-[18px] font-bold cursor-pointer'> Paul Mihang'o<span className='sm:block hidden'>Software Engineer</span></p>
-        </Link>
+          </Link>
         <ul className='list-none hidden sm:flex flex-row gap-10'>
           {navLinks.map((Link) =>(
-            <li>
-              <a href={'#${Link.id}'}>{Link.title}</a>
+            <li key={Link.id}className={'${active === Link.title ? "text-white": "text-secodary"} '}
+              >
+              <a href={'#${Link.id}'}> {Link.title}</a>
             </li>
           ))}
 
