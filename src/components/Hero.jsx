@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 
-import { styles } from '../styles'
-import { ComputersCanvas } from './canvas'
+import { styles } from '../styles';
+import { ComputersCanvas } from './canvas';
 
 const Hero = () => {
   return (
@@ -12,11 +12,15 @@ const Hero = () => {
           <div className='w-1 h-5 sm:h-80 h-40 violet-gradient'/>
         </div>
         <div>
-          <h1 className={'${styles.heroHeadText} text-white'}>Hi, I am <span className='text-[#915eff]'> Paul</span>  </h1>
-          <p className={'${styles.heroSubText} mt-2 text-white-100'} >
-            I am a Software Engineer <br className='sm:block hidden'/>passionate about front end development.
+          <h1 className={`${styles.heroHeadText} text-white`}>
+            Hi, I am <span className='text-[#915EFF]'>Paul</span>
+          </h1>
+          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+            A Software Engineer from Kenya <br className='sm:block hidden' />
+            passionate about front end development.
           </p>
         </div>
+
       </div>
       <ComputersCanvas />
     </section>
